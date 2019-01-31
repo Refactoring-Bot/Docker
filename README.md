@@ -1,2 +1,4 @@
-# docker
-Docker support for the refactoring bot
+# Refactoring-Bot: Docker Support
+
+This repository contains everything to use the Refactoring-Bot via Docker.
+
