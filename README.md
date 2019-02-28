@@ -1,6 +1,6 @@
 # Refactoring-Bot: Docker Support
 
-This repository contains everything to use the Refactoring-Bot via Docker. We provide a single Docker image (see `Dockerfile`) that includes both application components of the bot, namely the Java part and the web UI.
+This repository contains everything for installing the Refactoring-Bot via Docker. We provide a single Docker image (see `Dockerfile`) that includes both application components of the bot, namely the Java part and the web UI.
 - [Refactoring-Bot Java component](https://github.com/Refactoring-Bot/Refactoring-Bot) with business logic and API
   - API: <http://localhost:8808>
   - SwaggerUI: <http://localhost:8808/swagger-ui.html>
