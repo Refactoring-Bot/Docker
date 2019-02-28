@@ -1,0 +1,26 @@
+version: "3"
+services:
+  # MySQL DB
+  refactoring-bot-db:
+    container_name: refactoring-bot-db
+    image: mysql:8
+    ports:
+      - 3306:3306
+    environment: 
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - refactoring-bot-volume:/var/lib/mysql
+  # Application components (Java API and web frontend)
+  refactoring-bot:
+    container_name: refactoring-bot
+    build: .
+    image: refactoring-bot:latest
+    ports:
+      - 8808:8808
+      - 8000:80
+    environment: 
+      - DATABASE_HOST=refactoring-bot-db
+    depends_on:
+      - refactoring-bot-db
+volumes:
+  refactoring-bot-volume:
