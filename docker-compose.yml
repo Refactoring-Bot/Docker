@@ -13,7 +13,8 @@ services:
   # Application components (Java API and web frontend)
   refactoring-bot:
     container_name: refactoring-bot
-    build: .
+    # Uncomment the next line to build locally with the provided Dockerfile
+    # build: .
     image: refactoringbot/bot:latest
     ports:
       - 8808:8808

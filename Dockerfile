@@ -45,5 +45,8 @@ COPY --from=javaBuilder /app/Refactoring-Bot/target/RefactoringBot-0.0.1-SNAPSHO
 # Copy web app to nginx html dir
 COPY --from=nodeBuilder /app/Refactoring-Bot-UI/target/ /var/www/html/
 
+# Set ENV variables
+ENV LOCAL_DIR /app/workspace
+
 # Start command with web server and JAR file
 CMD nginx && java -jar /app/RefactoringBot.jar
