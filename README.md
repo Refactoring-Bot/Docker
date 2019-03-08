@@ -11,7 +11,7 @@ One option is to build the image and container locally via standard Docker comma
 
 ```bash
 # Build image from Dockerfile locally
-docker build -t refactoring-bot .
+docker build -t refactoringbot/bot .
 
 # Start MySQL DB instance
 docker run --name refactoring-bot-db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:8
@@ -22,7 +22,7 @@ docker create --name refactoring-bot \
     -p 8808:8808 \
     -p 8000:80 \
     -e DATABASE_HOST=172.17.0.2 \
-    refactoring-bot:latest
+    refactoringbot/bot:latest
 
 # Start container
 docker start refactoring-bot

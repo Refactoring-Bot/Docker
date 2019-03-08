@@ -1,5 +1,11 @@
+language: ruby
 services:
   - docker
 
 script:
-  - docker build -t refactoring-bot .
+  # login to Dockerhub with credentials stored in Travis ENV variables
+  - echo "$DOCKERHUB_PW" | docker login -u "$DOCKERHUB_USER" --password-stdin
+  # build image from Dockerfile
+  - docker build -t refactoringbot/bot .
+  # push image to Dockerhub
+  - docker push refactoringbot/bot

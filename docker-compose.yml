@@ -14,7 +14,7 @@ services:
   refactoring-bot:
     container_name: refactoring-bot
     build: .
-    image: refactoring-bot:latest
+    image: refactoringbot/bot:latest
     ports:
       - 8808:8808
       - 8000:80
