@@ -6,6 +6,6 @@ script:
   # login to Dockerhub with credentials stored in Travis ENV variables
   - echo "$DOCKERHUB_PW" | docker login -u "$DOCKERHUB_USER" --password-stdin
   # build image from Dockerfile
-  - docker build -t refactoringbot/bot .
+  - docker build -t refactoringbot/bot:latest .
   # push image to Dockerhub
-  - docker push refactoringbot/bot
+  - docker push refactoringbot/bot:latest

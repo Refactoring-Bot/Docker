@@ -37,7 +37,7 @@ The following snippets illustrate standard Docker commands for the usage of the 
 
 ```bash
 # Optional: Build image from Dockerfile locally (`Dockerfile` needs to be downloaded for this); not necessary, because the image will be pulled from DockerHub if it is not available locally
-docker build -t refactoringbot/bot .
+docker build -t refactoringbot/bot:latest .
 
 # Start MySQL DB instance
 docker run --name refactoring-bot-db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:8
